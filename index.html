@@ -3,8 +3,17 @@
     <meta charset="utf-8" />
     <script src="https://unpkg.com/vue@next"></script>
   </head>
-  <body></body>
+  <body>
+  <div id="app">Premier div</div>
+  <div>Le reste de la page n'est pas géré par Vue.js</div>
+  </body>
+
   <script>
-    alert(`Vue.version = ${Vue.version}`);
+    var app = Vue.createapp({
+      template : "Ce div est géré avec Vue.js"
+    });
+
+    // monter l'appication Vue.js sur le <div> ayant l'identification "app
+      var vm = app.mount("div#app");
   </script>
 </html>
